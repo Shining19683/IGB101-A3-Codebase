@@ -2875,15 +2875,15 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 0c65db36e8c4c49d7b7591efc3b74ed1, type: 2}
     - target: {fileID: 2664611327373836644, guid: b001cb61a0b189d4394e77fcb27043d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.010234
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 2664611327373836644, guid: b001cb61a0b189d4394e77fcb27043d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.87
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2664611327373836644, guid: b001cb61a0b189d4394e77fcb27043d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.899813
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 2664611327373836644, guid: b001cb61a0b189d4394e77fcb27043d8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2977,7 +2977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Jump
   anim: {fileID: 1257136885}
   rb: {fileID: 1257136887}
-  jumpForce: 20
+  jumpForce: 10
   isGrounded: 1
 --- !u!114 &1257136884
 MonoBehaviour:
@@ -3395,7 +3395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6941435195344f7d84d4c1ed2ce66e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSwitch
-  nextLevel: SampleScene
+  nextLevel: Willem Scene
 --- !u!65 &1322494273
 BoxCollider:
   m_ObjectHideFlags: 0
