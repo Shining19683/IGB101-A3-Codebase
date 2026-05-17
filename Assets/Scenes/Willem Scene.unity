@@ -2993,6 +2993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   anim: {fileID: 1257136885}
   rotSpeed: 10
+  jumpForce: 5
 --- !u!95 &1257136885 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2664611327364787940, guid: b001cb61a0b189d4394e77fcb27043d8, type: 3}
@@ -3395,7 +3396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6941435195344f7d84d4c1ed2ce66e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSwitch
-  nextLevel: Willem Scene
+  nextLevel: Miqdad_Scene
 --- !u!65 &1322494273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4161,6 +4162,7 @@ MonoBehaviour:
   pickupText: {fileID: 1269010734}
   audioSources: []
   audioProximity: 5
+  audioStopDistance: 6
   currentPickups: 0
   maxPickups: 1
   levelComplete: 0
