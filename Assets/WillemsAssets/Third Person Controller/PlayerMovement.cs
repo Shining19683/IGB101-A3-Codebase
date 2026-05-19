@@ -78,7 +78,6 @@ public class PlayerMovement : MonoBehaviour{
       // <- Jump closes here
 
     void OnCollisionEnter(Collision collision){
-        Debug.Log("Collision with: " + collision.gameObject.name);
         isGrounded = true;
     }
 }
