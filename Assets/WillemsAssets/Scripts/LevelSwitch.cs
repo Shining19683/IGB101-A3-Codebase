@@ -17,7 +17,6 @@ public class LevelSwitch : MonoBehaviour
     {
         if (otherObject.transform.tag == "Player")
         {
-            print('a');
             if (gameManager.levelComplete)
             {
                 SceneManager.LoadScene(nextLevel);
