@@ -7,19 +7,21 @@ public class PlayerMovement : MonoBehaviour{
     public Animator anim;
 
     public float rotSpeed = 10;
-    public float jumpForce = 5f;
-    private bool isGrounded = true;
-    private Rigidbody rb;
 
+    // Start is called before the first frame update
     void Start(){
-        rb = GetComponent<Rigidbody>();
+        
     }
 
+    // Update is called once per frame
     void Update(){
+
         ForwardMovement();
+
         Turning();
+
         Actions();
-        Jump();
+
     }
 
     private void ForwardMovement(){
@@ -36,20 +38,14 @@ public class PlayerMovement : MonoBehaviour{
         }
     }
 
-    private void Turning()
-    {
-        if (Input.GetKey("a"))
-        {
+    private void Turning(){
+        if (Input.GetKey("a")) {
             transform.Rotate(0, -rotSpeed * 15 * Time.deltaTime, 0, Space.World);
-            if (isGrounded) anim.SetBool("Turn Left", true);
-        }
-        else if (Input.GetKey("d"))
-        {
+            anim.SetBool("Turn Left", true);
+        } else if (Input.GetKey("d")) {
             transform.Rotate(0, rotSpeed * 15 * Time.deltaTime, 0, Space.World);
-            if (isGrounded) anim.SetBool("Turn Right", true);
-        }
-        else
-        {
+            anim.SetBool("Turn Right", true);
+        } else {
             anim.SetBool("Turn Left", false);
             anim.SetBool("Turn Right", false);
         }
@@ -61,23 +57,5 @@ public class PlayerMovement : MonoBehaviour{
         } else if(Input.GetKeyUp("e")){
             anim.SetBool("Waving", false);
         }
-    }
-
-    private void Jump(){
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
-            isGrounded = false;
-            anim.SetTrigger("Jumping");
-            StartCoroutine(DelayedJump());
-        }
-    }
-
-    private IEnumerator DelayedJump(){
-        yield return new WaitForSeconds(15f / 30f); // 15 frames at 30fps
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }
-      // <- Jump closes here
-
-    void OnCollisionEnter(Collision collision){
-        isGrounded = true;
     }
 }
